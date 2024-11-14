@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Numans&family=Righteous&family=Space+Grotesk:wght@300..700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cor-primaria: #f55b64;
+  --cor-secundaria: #c2373f;
+  --neutro: #f9f9f9;
+  --preto: #131730;
+  --fonte-texto: "Numans", sans-serif;
+  --degrade-azul: linear-gradient(180deg, #000000 0%, #26327f 100%);
+}
+
+body {
+  background: var(--degrade-azul);
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  border-radius: 16px;
+  background-color: var(--neutro);
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 3.8em;
+  width: 440px;
+  align-items: center;
+}
+
+h2 {
+  text-align: left;
+  color: var(--cor-primaria);
+  font-size: 20px;
+  line-height: 33px;
+  font-family: "Krona One", sans-serif;
+  font-weight: 400;
+}
+
+hr {
+    border: none;
+    border-bottom: 3px dotted var(--cor-primaria);
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+p {
+    font-family: var(--fonte-texto);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
