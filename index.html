@@ -9,29 +9,29 @@
   </head>
   <body>
     <main>
-      <img src="/image/sacola.png" alt="sacola-mercado" />
+      <img src="/image/sacola.svg" alt="sacola-mercado" />
       <form>
-        <input type="text" placeholder="Digite o item que deseja adicionar" />
-        <button>Salvar item</button>
+        <input id="input-item" type="text" placeholder="Digite o item que deseja adicionar" />
+        <button id="adicionar-botao">Salvar item</button>
       </form>
 
       <ul>
         <h2>Lista de compras</h2>
         <hr />
         <li>
-          <div>
-            <div>
+          <div class="item-lista-container">
+            <div class="container-nome-compra">
               <input type="checkbox" />
               <p>Ração de gato</p>
             </div>
             <div>
               <button>
-                <img src="/image/Excluir.png" alt="Excluir item" />
+                <img src="/image/Excluir.svg" alt="Excluir item" />
               </button>
-              <button><img src="/image/Edição.png" alt="Editar item" /></button>
+              <button><img src="/image/Edição.svg" alt="Editar item" /></button>
             </div>
           </div>
-          <p>Segunda-feira (14/11/2024) às 14:22</p>
+          <p class="item-lista-texto">Segunda-feira (14/11/2024) às 14:22</p>
         </li>
       </ul>
     </main>
