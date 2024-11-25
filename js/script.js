@@ -16,7 +16,8 @@ function adicionarItem(evento) {
   
     // Cria o elemento <li> com a classe estilizada
     const itemDaLista = document.createElement("li");
-    itemDaLista.classList.add("item-lista-container"); // Garante que a classe seja aplicada
+    const containerItemLista = document.createElement("div")
+    containerItemLista.classList.add("item-lista-container"); // Garante que a classe seja aplicada
   
     // Cria o container do nome e checkbox
     const containerNomeDoItem = document.createElement("div");
@@ -90,12 +91,16 @@ function adicionarItem(evento) {
     containerBotoes.appendChild(botaoEditar);
   
     // Monta o item completo
-    itemDaLista.appendChild(containerNomeDoItem);
-    itemDaLista.appendChild(containerBotoes);
+    containerItemLista.appendChild(containerNomeDoItem);
+    containerItemLista.appendChild(containerBotoes);
   
-    // Adiciona o item na lista
-    listaDeCompras.appendChild(itemDaLista);
-  
-    // Limpa o input
-    item.value = "";
+    const itemData = document.createElement("p");
+    itemData.innerText = `${new Date().toLocaleDateString("pt-br", {weekday: "long"})} (${new Date().toLocaleDateString()}) ás ${new Date().toLocaleTimeString("pt-br", {hour: "numeric", minute: "numeric"})}`;
+    itemData.classList.add("texto-data");
+    
+    itemDaLista.appendChild(containerItemLista);
+    itemDaLista.appendChild(itemData);
+    
+    return listaDeCompras.appendChild(itemDaLista)
+    
   }
