@@ -16,7 +16,7 @@ function adicionarItem(evento) {
   
     // Cria o elemento <li> com a classe estilizada
     const itemDaLista = document.createElement("li");
-    const containerItemLista = document.createElement("div")
+    const containerItemLista = document.createElement("div") // ----------> NÃO existia, então o "li" está sendo usando inves da DIV...
     containerItemLista.classList.add("item-lista-container"); // Garante que a classe seja aplicada
   
     // Cria o container do nome e checkbox
