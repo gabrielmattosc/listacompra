@@ -1,3 +1,6 @@
+import { excluirItem } from "./excluirItem.js";
+import { verificarListaVazia } from "./verificarListaVazia.js";
+
 const listaComprados = document.getElementById("lista-comprados");
 let contador = 0;
 
@@ -34,6 +37,7 @@ export function criarItemDaLista (item, listaDeCompras) {
           itemTitulo.style.textDecoration = "none";
           listaDeCompras.appendChild(itemDaLista)
         }
+        verificarListaVazia(listaDeCompras);
       })
   
       const checkboxCustomizado = document.createElement("div");
@@ -63,6 +67,11 @@ export function criarItemDaLista (item, listaDeCompras) {
       const imagemRemover = document.createElement("img");
       imagemRemover.src = "image/Excluir.svg";
       imagemRemover.alt = "Excluir item";
+      
+      botaoRemover.addEventListener("click", function(){
+        excluirItem(itemDaLista);
+      })
+
       botaoRemover.appendChild(imagemRemover);
     
     
